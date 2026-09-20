@@ -29,5 +29,15 @@ public void Enroll(Student student)
 
     // Lägger till student
     Students.Add(student);
+    student.Join(this);
 }
+
+public void Remove(Student student)
+    {
+        if (Students.Contains(student))
+        {
+            Students.Remove(student);
+            student.Leave(this);
+        }
+    }
 }
