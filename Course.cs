@@ -53,6 +53,12 @@ public void RollCall()
 
     foreach (var student in Students)
     {
-        Console.WriteLine("- " + student.Name");
+        Console.WriteLine("- " + student.Name);
+    }
+}
+
+public override string ToString()
+    {
+        return $"{Name} ({Students.Count}/{MaxSeats} platser)";
     }
 }
