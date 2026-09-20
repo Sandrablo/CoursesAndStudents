@@ -39,5 +39,20 @@ public void Remove(Student student)
             Students.Remove(student);
             student.Leave(this);
         }
+}
+
+// Skriver ut alla studerande
+public void RollCall()
+{
+    Console.WriteLine($"Upprop för {Name}");
+    if (Students.Count == 0)
+    {
+        Console.WriteLine("Inga studerande i denna kurs.");
+        return;
+    }
+
+    foreach (var student in Students)
+    {
+        Console.WriteLine("- " + student.Name");
     }
 }
