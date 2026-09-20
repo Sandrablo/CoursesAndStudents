@@ -19,3 +19,15 @@ public void Join(Course course)
 
     course.Enroll(this);
 }
+
+// Lämna en kurs
+public void Leave(Course course)
+{
+    if (!Courses.Contains(course))
+        {
+            return;
+        }
+        Courses.Remove(course);
+
+        course.Remove(this);
+}
