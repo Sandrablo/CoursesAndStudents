@@ -47,3 +47,9 @@ public void Schedule()
             Console.WriteLine("-" + course);
         }
 }
+
+public override string ToString()
+    {
+        return Name;
+    }
+}
