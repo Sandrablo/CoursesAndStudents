@@ -8,4 +8,14 @@ public class Student
     {
         Name = name;
     }
+// Gå med i en kurs
+public void Join(Course course)
+{
+    if (Courses.Contains(course))
+    {
+        return;
+    }
+    Courses.Add(course);
+
+    course.Enroll(this);
 }
