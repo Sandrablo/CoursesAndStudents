@@ -31,3 +31,19 @@ public void Leave(Course course)
 
         course.Remove(this);
 }
+
+// Skriv ut kurser 
+public void Schedule()
+{
+    Console.WriteLine($"Schema för {Name}");
+    if (Courses.count == 0)
+        {
+            Console.WriteLine("Inga registrerade kurser");
+            return;
+        }
+
+        foreach (var course in Courses)
+        {
+            Console.WriteLine("-" + course);
+        }
+}
