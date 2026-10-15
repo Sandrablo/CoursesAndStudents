@@ -36,7 +36,7 @@ public void Leave(Course course)
 public void Schedule()
 {
     Console.WriteLine($"Schema för {Name}");
-    if (Courses.count == 0)
+    if (Courses.Count == 0)
         {
             Console.WriteLine("Inga registrerade kurser");
             return;
