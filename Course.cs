@@ -28,16 +28,23 @@ public void Enroll(Student student)
     }
 
     // Lägger till student
+    // Lägger till kurs
     Students.Add(student);
-    student.Join(this);
+    student.Courses.Add(this);
+    Console.WriteLine(student.Name + "registrerades på " + Name);
 }
-
+// Tar bort en student
 public void Remove(Student student)
     {
         if (Students.Contains(student))
         {
             Students.Remove(student);
-            student.Leave(this);
+            student.Courses.Remove(this);
+            Console.WriteLine(student.Name + "togs bort från " + Name);
+        }
+        else
+        {
+            Console.WriteLine(student.Name + "är inte registrerad på " + Name);
         }
 }
 
