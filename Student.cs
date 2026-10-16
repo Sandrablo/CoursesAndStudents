@@ -30,7 +30,7 @@ public void Schedule()
 
         foreach (var course in Courses)
         {
-            Console.WriteLine("-" + course);
+            Console.WriteLine("- " + course);
         }
 }
 

@@ -31,7 +31,7 @@ public void Enroll(Student student)
     // Lägger till kurs
     Students.Add(student);
     student.Courses.Add(this);
-    Console.WriteLine(student.Name + "registrerades på " + Name);
+    Console.WriteLine(student.Name + " registrerades på " + Name);
 }
 // Tar bort en student
 public void Remove(Student student)
@@ -40,11 +40,11 @@ public void Remove(Student student)
         {
             Students.Remove(student);
             student.Courses.Remove(this);
-            Console.WriteLine(student.Name + "togs bort från " + Name);
+            Console.WriteLine(student.Name + " togs bort från " + Name);
         }
         else
         {
-            Console.WriteLine(student.Name + "är inte registrerad på " + Name);
+            Console.WriteLine(student.Name + " är inte registrerad på " + Name);
         }
 }
 
