@@ -1,5 +1,3 @@
-using System.Runtime.InteropServices;
-
 public class Student
 {
     public string Name;
@@ -11,24 +9,12 @@ public class Student
 // Gå med i en kurs
 public void Join(Course course)
 {
-    if (Courses.Contains(course))
-    {
-        return;
-    }
-    Courses.Add(course);
-
     course.Enroll(this);
 }
 
 // Lämna en kurs
 public void Leave(Course course)
 {
-    if (!Courses.Contains(course))
-        {
-            return;
-        }
-        Courses.Remove(course);
-
         course.Remove(this);
 }
 
